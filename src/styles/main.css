@@ -1,0 +1,223 @@
+/* Specification */
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+}
+
+.title {
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px -1px 1px black;
+}
+
+.allIcon {
+    font-size: 25px;
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none !important;
+    color: white;
+}
+
+input, textarea, select {
+    border: 0 !important;
+}
+
+hr {
+    background-color: white;
+    size: 1px;
+} 
+
+/* header */
+
+.header {
+    background-color: rgb(230, 152, 152);
+    font-size: 40px;
+    text-align: center;
+    
+    height: 100px;
+}
+
+/* main */
+
+.main {
+    /* background-color: #b8cf69; */
+    background-color: #949494;
+    padding: 15px 0 15px;
+}
+
+/* footer */
+
+.footer {
+    background-color: rgb(97, 92, 92);
+    font-size: 25px;
+    text-align: center;
+
+    height: 70px;
+}
+
+/* item tree */
+
+.itemTree {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+} 
+
+#tree-maxsize {
+    min-height: 300px;
+}
+
+.itemTree__change {
+    text-align: center;
+}
+
+.itemTree__change button {
+    height: 45px;
+    width: 45px;
+}
+
+.itemTree__change__up:hover,
+.itemTree__change__down:hover {
+    background-color: SteelBlue;
+    transition: all 0.4s ease;
+}
+
+.itemTree__change__delete:hover {
+    background-color: tomato;
+    transition: all 0.4s ease;
+}
+
+.itemTree__add button {
+    font-size: 20px;
+    padding: 10px;
+    width: 230px;
+}
+
+.add__text {
+    margin-bottom: 15px;
+}
+
+.add__text :hover,
+.add__image :hover {
+    background-color: OliveDrab;
+    transition: all 0.4s ease;
+}
+
+
+/* preview news */
+
+.preview {
+    background-color: rgb(229, 226, 226);
+    min-height: 500px;
+    white-space: pre-wrap;  /* ВАЖНО! */
+}
+
+.preview__title {
+    color: black;
+    text-shadow: 1px -1px 1px white;
+}
+
+/* news creation form */
+
+.creation {
+    margin-top: 30px;
+}
+
+.creation__title {
+    padding: auto;
+}
+
+.toolbox {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.toolbox a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.toolbox__img, .imageForm {
+    background-color: #5e942b !important;
+    text-decoration: none;
+}
+
+/* .toolbox__txt, .textForm {
+    background-color: #4154ac !important;
+    text-decoration: none;
+} */
+
+/* text form */
+
+.textForm__styles {
+    margin-bottom: 25px;
+}
+
+.textForm__styles button {
+    font-size: 25px;
+    height: 50px;
+    width: 70px;
+}
+
+.textForm__styles button:hover {
+    background-color: SlateGrey;
+    transition: all 0.4s ease;
+}
+
+.border {
+    background-color: transparent;
+    border: 1px solid white !important;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.border:hover {
+    background-color: SlateGrey;
+    transition: all 0.4s ease;
+}
+
+.border i {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.textForm__fontFamily,
+.textForm__content,
+.textForm__fontSize,
+.textForm__FontWidth,
+.textForm__fontWeight {
+    font-size: 16px;
+}
+
+.textForm__color,
+.textForm__bgColor {
+    height: 44px;
+}
+
+.textForm__input {
+    margin-top: 15px;
+}
+
+.textForm__input button {
+    border: 1px solid white;
+    border-radius: 0 5px 5px 0;
+    color: tomato !important;
+}
+
+.textForm__btnClear :hover {
+    background-color: tomato;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+

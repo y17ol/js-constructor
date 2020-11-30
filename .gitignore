@@ -1,0 +1,7 @@
+/.cache
+/archive
+/dist
+/node_modules
+
+/notes
+/old build
