@@ -8,9 +8,9 @@ export function divO(divClass = '', id = '', option = '', content = 'divO text')
     return `<div class="${divClass}" id="${id}" ${option}>${content}</div>`
 }
 
-export function textareaDiv(taClass, content) {
-    return `<div class="form-control ${taClass}" contenteditable="true">${content}</div>`
-}
+// export function textareaDiv(taClass, content) {
+//     return `<div class="form-control ${taClass}" contenteditable="true">${content}</div>`
+// }
 
 // bootstrap
 

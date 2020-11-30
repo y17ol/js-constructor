@@ -189,7 +189,7 @@ function textFormBgcolor() {
 
 function textFormInput() {
     return div('input-group textForm__input', 
-        textareaDiv('textForm__content', 'Your text') +
+        textarea('textForm__content', 'Your text', 'Your text', 8) +
         div('input-group-append textForm__btnClear', 
             button('button', '', icon('times-circle allIcon'))
         )

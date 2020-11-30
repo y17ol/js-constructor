@@ -142,53 +142,5 @@ export function textFormContentClear(event) {
 
     document.getElementById('text' + selectedBlock).textContent = ''
     document.getElementById('item' + selectedBlock).textContent = 'Your text'
-    document.querySelector('.textForm__content').textContent = ''
-}
-
-let cursorPosition = 9
-
-export function changeText(event) {
-
-    let $news = document.getElementById('text' + selectedBlock)
-    let $text = document.querySelector('.textForm__content')
-    
-    $news.textContent = $text.textContent
-    fillTreeItem(selectedBlock)
-
-    cursorPosition = getCursorPosition($text)
-
-
-    let txt = $text.textContent
-    if (event.key === 'Enter') {
-        // $text.innerHTML = txt.slice(0,cursorPosition) + '<br />' + txt.slice(cursorPosition)
-        // $news.innerHTML = txt.slice(0,cursorPosition) + '<br />' + txt.slice(cursorPosition)
-
-        let selection = document.getSelection()
-        let range = new Range
-        range.setStart($text, 0)
-        range.setEnd(selection.anchorNode, selection.anchorOffset)
-
-        let br = document.createElement('br')
-        range.insertNode(br)
-
-        //
-
-        let range2 = new Range
-        range2.setStart($news, 0)
-        range2.setEnd($news, cursorPosition)
-
-        let br2 = document.createElement('br')
-        range2.insertNode(br2)
-    }
-
-    
-
-    
-    
-}
-
-export function clickText(event) {
-
-    let $text = document.querySelector('.textForm__content')
-    cursorPosition = getCursorPosition($text)
+    document.querySelector('.textForm__content').value = ''
 }
