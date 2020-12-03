@@ -128,16 +128,14 @@ function textForm() {
 function textFormStyles() {
     return div('textForm__styles',
         row(
-            col('col-1', button('', 'textForm__italic textForm__btn', icon('italic allIcon'), 'italic', 'tooltip')) +
-            col('col-1', button('', 'textForm__strikethrough textForm__btn', icon('strikethrough allIcon'), 'strikethrough', 'tooltip')) +
-            col('col-1', button('', 'textForm__underline textForm__btn', icon('underline allIcon'), 'underline', 'tooltip')) +
-            col('col-1 offset-md-2', button('', 'textForm__alignLeft textForm__btn', icon('align-left allIcon'), 'align-left', 'tooltip')) +
-            col('col-1', button('', 'textForm__alignCenter textForm__btn', icon('align-center allIcon'), 'align-center', 'tooltip')) +
-            col('col-1', button('', 'textForm__alignRight textForm__btn', icon('align-right allIcon'), 'align-right', 'tooltip')) +
-            col('col-1', button('', 'textForm__alignJustify textForm__btn', icon('align-justify allIcon'), 'align-justify', 'tooltip')) +
-            col('col-1 offset-md-1', button('', 'textForm__listUl textForm__btn', icon('list-ul allIcon'), 'list-ul', 'tooltip')) +
-            col('col-1', button('', 'textForm__listOl textForm__btn', icon('list-ol allIcon'), 'list-ol', 'tooltip'))
-        )
+            col('col-1', button('', 'textForm__italic textForm__btn', icon('italic allIcon'), 'italic', 'tooltip', 'false')) +
+            col('col-1', button('', 'textForm__strikethrough textForm__btn', icon('strikethrough allIcon'), 'strikethrough', 'tooltip', 'false')) +
+            col('col-1', button('', 'textForm__underline textForm__btn', icon('underline allIcon'), 'underline', 'tooltip', 'false')) +
+            col('col-1 offset-md-1', button('', 'textForm__alignLeft textForm__btn', icon('align-left allIcon'), 'align-left', 'tooltip', 'false')) +
+            col('col-1', button('', 'textForm__alignCenter textForm__btn', icon('align-center allIcon'), 'align-center', 'tooltip', 'false')) +
+            col('col-1', button('', 'textForm__alignRight textForm__btn', icon('align-right allIcon'), 'align-right', 'tooltip', 'false')) +
+            col('col-1', button('', 'textForm__alignJustify textForm__btn', icon('align-justify allIcon'), 'align-justify', 'tooltip', 'false'))
+        , 'justify-content-between')
     )
 }
 

@@ -220,4 +220,6 @@ hr {
     transition: all 0.4s ease;
 }
 
-
+body{
+    background-color: #5c5c5c;
+}

@@ -46,6 +46,26 @@ export function fillNewsText(idNewsText = 0) {
     $newsText.style.fontWeight = document.querySelector('.textForm__fontWeight').value
     $newsText.style.color = document.querySelector('.textForm__color').value
     $newsText.style.backgroundColor = document.querySelector('.textForm__bgColor').value
+
+    $newsText.style.fontStyle = document.querySelector('.textForm__italic').value == 'true' ? 'italic' : 'normal'
+
+    $newsText.style.textDecoration = 
+      document.querySelector('.textForm__strikethrough').value == 'true' ?
+        'line-through' :
+        document.querySelector('.textForm__underline').value == 'true' ?
+          'underline' :
+          'none'
+        
+    $newsText.style.textAlign = 
+      document.querySelector('.textForm__alignLeft').value == 'true' ?
+        'left' :
+        document.querySelector('.textForm__alignCenter').value == 'true' ?
+          'center' :
+          document.querySelector('.textForm__alignRight').value == 'true' ?
+            'right' :
+            document.querySelector('.textForm__alignJustify').value == 'true' ?
+              'justify' :
+              'auto'    
 }
 
 export function fillTextForm(idNewsText = 0) {
@@ -64,4 +84,58 @@ export function fillTextForm(idNewsText = 0) {
     document.querySelector('.textForm__fontWeight').value = $newsText.style.fontWeight
     document.querySelector('.textForm__color').value = RGBToHex($newsText.style.color)
     document.querySelector('.textForm__bgColor').value = RGBToHex($newsText.style.backgroundColor)
+
+    document.querySelector('.textForm__italic').value = $newsText.style.fontStyle == 'italic' ? true : false
+
+    if ($newsText.style.textDecoration == 'line-through')
+      document.querySelector('.textForm__strikethrough').value = 'true'
+    else if ($newsText.style.textDecoration == 'underline')
+      document.querySelector('.textForm__underline').value = 'true'
+    else {
+      document.querySelector('.textForm__strikethrough').value = 'false'
+      document.querySelector('.textForm__underline').value = 'false'
+    }
+
+    switch ($newsText.style.textAlign) {
+      case ('left'):
+        clearBtnAlign()
+        document.querySelector('.textForm__alignLeft').value = 'true'
+        break
+      case ('center'):
+        clearBtnAlign()
+        document.querySelector('.textForm__alignCenter').value = 'true'
+        break
+      case ('right'):
+        clearBtnAlign()
+        document.querySelector('.textForm__alignRight').value = 'true'
+        break
+      case ('justify'):
+        clearBtnAlign()
+        document.querySelector('.textForm__alignJustify').value = 'true'
+        break
+      default:
+        clearBtnAlign()
+        break
+    }
+}
+
+export function setTextStyle(target, ifTrue, ifFalse) {
+
+  if (target.tagName == 'I')
+    target = target.parentNode
+
+  if (target.value == 'true') {
+    ifTrue()
+    target.value = 'false'
+  } else {
+    ifFalse()
+    target.value = 'true'
+  }  
+}
+
+export function clearBtnAlign() {
+  document.querySelector('.textForm__alignLeft').value = 'false'
+  document.querySelector('.textForm__alignCenter').value = 'false'
+  document.querySelector('.textForm__alignRight').value = 'false'
+  document.querySelector('.textForm__alignJustify').value = 'false'
 }

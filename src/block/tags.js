@@ -8,10 +8,6 @@ export function divO(divClass = '', id = '', option = '', content = 'divO text')
     return `<div class="${divClass}" id="${id}" ${option}>${content}</div>`
 }
 
-// export function textareaDiv(taClass, content) {
-//     return `<div class="form-control ${taClass}" contenteditable="true">${content}</div>`
-// }
-
 // bootstrap
 
 export function container(content = 'container content') {
@@ -36,8 +32,8 @@ export function form(formClass = '', name = '', content = 'form content') {
     return `<form class="${formClass}" name="${name}">${content}</form>`
 }
 
-export function button(type = 'button', btnClass = '', content = 'button text', title = '', dataToggle = '') {
-    return `<button type="${type === '' ? 'button' : type}" class="${btnClass}" title="${title}" data-toggle="${dataToggle}">${content}</button>`
+export function button(type = 'button', btnClass = '', content = 'button text', title = '', dataToggle = '', value = 'false') {
+    return `<button type="${type === '' ? 'button' : type}" class="${btnClass}" title="${title}" data-toggle="${dataToggle}" value="${value}">${content}</button>`
 }
 
 export function input(type = 'text', inputClass, placeholder = '', value = '', size = '') {
